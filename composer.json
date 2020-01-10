@@ -1,0 +1,25 @@
+{
+  "name": "marblanco/arranger",
+  "description": "Just move to objects easily",
+  "keywords": [
+    "transform"
+  ],
+  "homepage": "https://github.com/cebe/markdown#readme",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tony Nazarov",
+      "email": "tonynazarov@gmail.com",
+      "role": "Creator"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Marblanco\\Arranger\\": "src/"
+    }
+  }
+}
