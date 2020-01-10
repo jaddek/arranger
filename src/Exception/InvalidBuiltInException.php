@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Marblanco\Arranger\Exception;
+namespace Jaddek\Arranger\Exception;
 
 /**
  * Class InvalidBuiltInException

@@ -1,5 +1,5 @@
 {
-  "name": "marblanco/arranger",
+  "name": "Jaddek/arranger",
   "description": "Just move to objects easily",
   "keywords": [
     "transform"
@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Marblanco\\Arranger\\": "src/"
+      "Jaddek\\Arranger\\": "src/"
     }
   }
 }

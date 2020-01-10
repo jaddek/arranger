@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Marblanco\Arranger;
+namespace Jaddek\Arranger;
 
 /**
  * Interface HarmonizedInterface

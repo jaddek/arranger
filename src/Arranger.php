@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Marblanco\Arranger;
+namespace Jaddek\Arranger;
 
 /**
  *
  */
-class Arranger implements ArrangerInterface
+final class Arranger implements ArrangerInterface
 {
     /**
-     * @var Composer
+     * @var Transformer
      */
-    private $composer;
+    private $transformer;
 
     /**
      * Transformer constructor.
      */
     public function __construct()
     {
-        $this->composer = new Composer();
+        $this->transformer = new Transformer();
     }
 
     /**
@@ -30,7 +30,7 @@ class Arranger implements ArrangerInterface
      */
     public function decompose(HarmonizedInterface $valueObject): array
     {
-        return $this->composer->decompose($valueObject);
+        return $this->transformer->decompose($valueObject);
     }
 
     /**
@@ -42,6 +42,6 @@ class Arranger implements ArrangerInterface
      */
     public function compose(array $data, string $class): HarmonizedInterface
     {
-        return $this->composer->compose($class, $data);
+        return $this->transformer->compose($class, $data);
     }
 }

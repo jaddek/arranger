@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Marblanco\Arranger;
+namespace Jaddek\Arranger;
 
-use Marblanco\Arranger\Exception\InvalidBuiltInException;
+use Jaddek\Arranger\Exception\InvalidBuiltInException;
 
 /**
  * Class Sharper
  */
-final class Composer
+final class Transformer
 {
     /**
      * @param string $class
@@ -28,9 +28,15 @@ final class Composer
         foreach ($parameters as $parameter) {
             $argument  = $parameter->getName();
             $value     = $data[$argument] ?? null;
-            $isBuiltIn = $parameter->getType()->isBuiltin();
+            $type      = $parameter->getType();
 
-            switch ($isBuiltIn) {
+            if (is_null($type)) {
+                $args[$argument] = $value;
+
+                continue;
+            }
+
+            switch ($type->isBuiltin()) {
                 case false:
                     $this->assignObject($value, $parameter, $args, $class);
                     break;
